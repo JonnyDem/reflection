@@ -18,7 +18,7 @@ public class HackService {
             System.out.println("name: " + f.getName() + ", type: " + f.getType());
             f.setAccessible(true);
             Object o = f.get(user);
-            if(f.getName().equals("array")){
+            if(f.getType().isArray()){
                 Field field = userClass.getDeclaredField("array");
                 field.setAccessible(true);
                 int[] array = (int[]) field.get(user);
