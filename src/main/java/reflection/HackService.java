@@ -21,7 +21,7 @@ public class HackService {
             if(f.getName().equals("array")){
                 Field field = userClass.getDeclaredField("array");
                 field.setAccessible(true);
-                int[]array=(int[])field.get(user);
+                int[] array = (int[]) field.get(user);
                 for(int i:array){
                     System.out.println("before changing: " + i);
                 }
